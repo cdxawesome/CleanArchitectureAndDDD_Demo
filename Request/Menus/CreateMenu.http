@@ -1,0 +1,23 @@
+@host=http://localhost:5065
+@hostId=asdas
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjYWQyN2U3MS03NjJjLTRjMmQtOTg3MC01YWU4Y2Y3NWFlYjMiLCJnaXZlbl9uYW1lIjoiRHlsYW4iLCJmYW1pbHlfbmFtZSI6IkNoZW4iLCJqdGkiOiJjMmY4MWE1MS0zNGY0LTQzZTctOWMxZC1hZGQ5ZmVhMDQ3ZTYiLCJleHAiOjE3MDg4NDcwMTYsImlzcyI6IkJ1YmVyRGlubmVyIiwiYXVkIjoiQnViZXJEaW5uZXIifQ.Bwqf81q-skaTYkYd3WD7pR-WdZStIL_7o3XPGSn7-e0
+POST {{host}}/hosts/{{hostId}}/menus
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "name": "Menu Name",
+    "description": "Menu Description",
+    "sections": [
+        {
+            "name": "Appetizers",
+            "description": "Starters",
+            "items":[
+                {
+                    "name": "Fried Pickles",
+                    "description": "Deep fried pickles"
+                }
+            ]
+        }
+    ]
+}
